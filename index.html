@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>故事星圖 Story Platform UI Mockup</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="主要導覽">
+        <a class="brand" href="#discover" data-screen-link="discover" aria-label="故事星圖首頁">
+          <span class="brand-mark">S</span>
+          <span>
+            <strong>故事星圖</strong>
+            <small>Literature Lab for Kids</small>
+          </span>
+        </a>
+
+        <nav class="side-nav">
+          <button class="nav-item active" type="button" data-screen-link="discover">
+            <span>探索課程</span>
+          </button>
+          <button class="nav-item" type="button" data-screen-link="detail">
+            <span>課程詳情</span>
+          </button>
+          <button class="nav-item" type="button" data-screen-link="player">
+            <span>故事播放器</span>
+          </button>
+          <button class="nav-item" type="button" data-screen-link="library">
+            <span>我的課程</span>
+          </button>
+          <button class="nav-item" type="button" data-screen-link="admin">
+            <span>管理後台</span>
+          </button>
+        </nav>
+
+        <div class="account-panel">
+          <span class="avatar">林</span>
+          <div>
+            <strong>林小禾</strong>
+            <small>active member</small>
+          </div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="search-wrap">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input type="search" placeholder="搜尋故事、課程、訂單或會員 Email" />
+          </div>
+          <div class="top-actions">
+            <button class="ghost-button" type="button">聯繫客服</button>
+            <button class="primary-button" type="button">購買課程</button>
+          </div>
+        </header>
+
+        <section class="screen active" id="discover" aria-labelledby="discover-title">
+          <div class="hero">
+            <img src="assets/story-worlds-hero.png" alt="推理、奇幻、科幻、哲學與科學邏輯交織的故事世界插畫" />
+            <div class="hero-copy">
+              <p class="eyebrow">兒童經典故事聽讀平台</p>
+              <h1 id="discover-title">故事星圖</h1>
+              <p>
+                把推理、奇幻、科幻與經典文學濃縮成孩子聽得懂的故事，再接上哲學提問、科學邏輯與真實童言。
+              </p>
+              <div class="hero-actions">
+                <button class="primary-button" type="button" data-screen-link="detail">查看課程</button>
+                <button class="ghost-light-button" type="button" data-screen-link="player">試看播放器</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">公開上架</p>
+              <h2>課程列表</h2>
+            </div>
+            <div class="segmented" role="tablist" aria-label="課程進度篩選">
+              <button class="active" type="button" data-filter="all">全部</button>
+              <button type="button" data-filter="in_progress">進行中</button>
+              <button type="button" data-filter="open_for_registration">開放報名</button>
+            </div>
+          </div>
+
+          <div class="course-grid" id="courseGrid"></div>
+        </section>
+
+        <section class="screen" id="detail" aria-labelledby="detail-title">
+          <div class="detail-layout">
+            <article class="detail-main">
+              <div class="detail-cover">
+                <img src="assets/story-worlds-hero.png" alt="課程視覺封面" />
+              </div>
+              <div class="detail-copy">
+                <p class="eyebrow">進行中 · 每週新增音檔</p>
+                <h1 id="detail-title">偵探、怪物與星際議題</h1>
+                <p>
+                  以福爾摩斯式推理、科幻倫理與奇幻寓言為主軸，帶孩子練習「提出證據」、「辨認假設」與「說出自己的想法」。
+                </p>
+                <div class="metric-row">
+                  <div><strong>18</strong><span>堂音檔</span></div>
+                  <div><strong>7.5 hr</strong><span>總長度</span></div>
+                  <div><strong>NT$ 1,680</strong><span>課程價格</span></div>
+                </div>
+              </div>
+            </article>
+
+            <aside class="checkout-panel">
+              <h2>手動授權</h2>
+              <p>目前尚未開放線上購買。完成付款或由客服確認後，管理者會手動開通課程級播放權限。</p>
+              <dl>
+                <div><dt>開通方式</dt><dd>管理員手動開通</dd></div>
+                <div><dt>授權範圍</dt><dd>整門課程</dd></div>
+                <div><dt>播放 URL</dt><dd>短效 90 分鐘</dd></div>
+              </dl>
+              <button class="primary-button full" type="button">聯繫客服開通</button>
+              <button class="ghost-button full" type="button" data-screen-link="library">查看我的課程</button>
+            </aside>
+          </div>
+
+          <div class="content-band">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">公開大綱</p>
+                <h2>只顯示 published 音檔</h2>
+              </div>
+              <span class="count-pill">12 個可公開預覽章節</span>
+            </div>
+            <div class="outline-list">
+              <div class="outline-row">
+                <span class="track-no">01</span>
+                <div>
+                  <strong>失蹤的銀色懷錶</strong>
+                  <small>推理故事濃縮 · 證據與推論</small>
+                </div>
+                <span class="status ready">published</span>
+              </div>
+              <div class="outline-row">
+                <span class="track-no">02</span>
+                <div>
+                  <strong>月球上的第一個問題</strong>
+                  <small>科幻倫理 · 如果機器會害怕</small>
+                </div>
+                <span class="status ready">published</span>
+              </div>
+              <div class="outline-row muted">
+                <span class="track-no">03</span>
+                <div>
+                  <strong>森林門後的名字</strong>
+                  <small>hidden 音檔不出現在公開大綱</small>
+                </div>
+                <span class="status hidden">hidden</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="player" aria-labelledby="player-title">
+          <div class="player-layout">
+            <aside class="playlist-panel">
+              <div class="section-head compact">
+                <div>
+                  <p class="eyebrow">我的課程</p>
+                  <h2>音檔清單</h2>
+                </div>
+              </div>
+              <div id="audioList" class="audio-list"></div>
+            </aside>
+
+            <article class="player-panel">
+              <div class="player-context" aria-label="目前播放課程資訊">
+                <span class="context-kicker">課程音檔</span>
+                <strong>偵探、怪物與星際議題</strong>
+                <small>無單集圖片設計 · 以章節、狀態與授權為主要資訊</small>
+              </div>
+              <p class="eyebrow">play-url checked · active grant</p>
+              <h1 id="player-title">失蹤的銀色懷錶</h1>
+              <p>
+                今天的問題：一個線索能不能有兩種解釋？孩子先聽故事，再用「證據、假設、反例」說出自己的推理。
+              </p>
+
+              <div class="player-controls">
+                <button class="icon-button" type="button" id="rewindBtn" aria-label="倒轉 15 秒">↶</button>
+                <button class="play-button" type="button" id="playBtn" aria-label="播放或暫停">▶</button>
+                <button class="icon-button" type="button" id="forwardBtn" aria-label="快轉 15 秒">↷</button>
+              </div>
+              <div class="progress-wrap">
+                <span id="currentTime">00:00</span>
+                <input id="progressRange" type="range" min="0" max="100" value="28" aria-label="播放進度" />
+                <span>21:35</span>
+              </div>
+              <div class="notice-row">
+                <span class="notice ok">URL TTL 5400 秒</span>
+                <span class="notice">音檔更新時間：2026-05-13 20:30</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="screen" id="library" aria-labelledby="library-title">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">會員中心</p>
+              <h1 id="library-title">我的課程與訂單</h1>
+            </div>
+            <button class="ghost-button" type="button">匯出購課明細</button>
+          </div>
+
+          <div class="library-grid">
+            <article class="access-summary">
+              <h2>有效播放權限</h2>
+              <div class="grant-row">
+                <span class="grant-dot"></span>
+                <div>
+                  <strong>偵探、怪物與星際議題</strong>
+                  <small>來源：線上訂單 ORD-260514-001 · active</small>
+                </div>
+              </div>
+              <div class="grant-row">
+                <span class="grant-dot manual"></span>
+                <div>
+                  <strong>小小哲學家的怪問題</strong>
+                  <small>來源：管理員手動開通 · active</small>
+                </div>
+              </div>
+              <button class="primary-button full" type="button" data-screen-link="player">繼續播放</button>
+            </article>
+
+            <article class="orders-panel">
+              <h2>訂單紀錄</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>訂單</th>
+                    <th>課程</th>
+                    <th>金額</th>
+                    <th>狀態</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ORD-260514-001</td>
+                    <td>偵探、怪物與星際議題</td>
+                    <td>NT$ 1,680</td>
+                    <td><span class="status ready">paid</span></td>
+                  </tr>
+                  <tr>
+                    <td>ORD-260508-014</td>
+                    <td>經典寓言與真實童言</td>
+                    <td>NT$ 1,280</td>
+                    <td><span class="status warn">grant_pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>ORD-260430-004</td>
+                    <td>星球公民課</td>
+                    <td>NT$ 980</td>
+                    <td><span class="status muted-status">refunded</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+        </section>
+
+        <section class="screen" id="admin" aria-labelledby="admin-title">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Admin Console</p>
+              <h1 id="admin-title">營運後台</h1>
+            </div>
+            <button class="primary-button" type="button">新增課程</button>
+          </div>
+
+          <div class="admin-tabs" role="tablist" aria-label="後台區塊">
+            <button class="active" type="button" data-admin-tab="content">內容管理</button>
+            <button type="button" data-admin-tab="grants">會員權限</button>
+            <button type="button" data-admin-tab="members">會員管理</button>
+            <button type="button" data-admin-tab="logs">操作紀錄</button>
+          </div>
+
+          <div class="admin-view active" data-admin-view="content">
+            <form class="filter-bar" id="contentFilters">
+              <label>
+                課程
+                <select name="course">
+                  <option value="all">全部課程</option>
+                  <option value="detective">偵探、怪物與星際議題</option>
+                  <option value="philosophy">小小哲學家的怪問題</option>
+                </select>
+              </label>
+              <label>
+                課程狀態
+                <select name="progress">
+                  <option value="all">全部</option>
+                  <option value="in_progress">進行中</option>
+                  <option value="open_for_registration">開放報名</option>
+                </select>
+              </label>
+              <label>
+                音檔狀態
+                <select name="audioStatus">
+                  <option value="all">全部</option>
+                  <option value="published">published</option>
+                  <option value="hidden">hidden</option>
+                  <option value="draft">draft</option>
+                </select>
+              </label>
+              <button class="ghost-button" type="reset">清除篩選</button>
+            </form>
+
+            <div class="admin-summary">
+              <span id="contentResultCount">符合 2 門課程、7 個音檔</span>
+              <button class="ghost-button" type="button" id="batchUploadBtn">批次上傳 MP3</button>
+            </div>
+
+            <div class="admin-grid">
+              <article class="admin-course-card">
+                <div class="card-head">
+                  <div>
+                    <h2>偵探、怪物與星際議題</h2>
+                    <small>public · in_progress · NT$ 1,680</small>
+                  </div>
+                  <span class="status ready">公開上架</span>
+                </div>
+                <div class="upload-queue" id="uploadQueue" hidden>
+                  <div class="upload-row"><span>01_失蹤的銀色懷錶.mp3</span><progress value="100" max="100"></progress><b>ready</b></div>
+                  <div class="upload-row"><span>02-月球上的第一個問題.mp3</span><progress value="72" max="100"></progress><b>uploading</b></div>
+                  <div class="upload-row"><span>2024-02-06 導讀.mp3</span><progress value="0" max="100"></progress><b>failed</b></div>
+                </div>
+                <div class="admin-audio-list">
+                  <div><span>01</span><strong>失蹤的銀色懷錶</strong><em class="status ready">published</em><em class="status ready">ready</em></div>
+                  <div><span>02</span><strong>月球上的第一個問題</strong><em class="status ready">published</em><em class="status warn">processing</em></div>
+                  <div><span>03</span><strong>森林門後的名字</strong><em class="status hidden">hidden</em><em class="status ready">ready</em></div>
+                  <div><span>04</span><strong>結局前的反例</strong><em class="status muted-status">draft</em><em class="status ready">ready</em></div>
+                </div>
+              </article>
+
+              <article class="risk-panel">
+                <h2>高風險操作確認</h2>
+                <p>更換已發布音檔、停用會員、退款、升級管理者與撤銷手動開通都需填寫原因並寫入 append-only 操作紀錄。</p>
+                <label>
+                  操作原因
+                  <textarea rows="4" placeholder="例：上傳檔案錯置，需保留原 audio_id 並更換檔案。"></textarea>
+                </label>
+                <button class="danger-button full" type="button">二次確認後執行</button>
+              </article>
+            </div>
+          </div>
+
+          <div class="admin-view" data-admin-view="grants">
+            <form class="filter-bar">
+              <label>關鍵字<input type="search" value="林小禾" /></label>
+              <label>課程<select><option>全部課程</option><option>小小哲學家的怪問題</option></select></label>
+              <label>權限狀態<select><option>active</option><option>revoked</option><option>refunded</option></select></label>
+              <button class="ghost-button" type="button">清除篩選</button>
+            </form>
+            <div class="table-panel">
+              <table>
+                <thead><tr><th>會員</th><th>課程</th><th>來源</th><th>狀態</th><th>備註</th></tr></thead>
+                <tbody>
+                  <tr><td>林小禾</td><td>小小哲學家的怪問題</td><td>manual</td><td><span class="status ready">active</span></td><td>線下付款補登</td></tr>
+                  <tr><td>陳安安</td><td>偵探、怪物與星際議題</td><td>order</td><td><span class="status muted-status">refunded</span></td><td>客服退款完成</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="admin-view" data-admin-view="members">
+            <form class="filter-bar">
+              <label>關鍵字<input type="search" placeholder="姓名或 Email" /></label>
+              <label>角色<select><option>全部</option><option>會員</option><option>管理員</option></select></label>
+              <label>帳號狀態<select><option>全部</option><option>active</option><option>restricted</option><option>disabled</option></select></label>
+              <label>Email 驗證<select><option>全部</option><option>已驗證</option><option>未驗證</option></select></label>
+            </form>
+            <div class="table-panel">
+              <table>
+                <thead><tr><th>姓名</th><th>Email</th><th>角色</th><th>帳號狀態</th><th>驗證</th></tr></thead>
+                <tbody>
+                  <tr><td>林小禾</td><td>lin@example.com</td><td>member</td><td><span class="status ready">active</span></td><td>已驗證</td></tr>
+                  <tr><td>王書然</td><td>book@example.com</td><td>admin</td><td><span class="status ready">active</span></td><td>已驗證</td></tr>
+                  <tr><td>周未明</td><td>pending@example.com</td><td>member</td><td><span class="status warn">restricted</span></td><td>未驗證</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="admin-view" data-admin-view="logs">
+            <div class="timeline">
+              <div><time>2026-05-14 21:10</time><strong>replace_audio_file</strong><span>audio#A-102 · 原因：檔案錯置</span></div>
+              <div><time>2026-05-14 19:42</time><strong>manual_grant_created</strong><span>user#U-88 · course#C-12 · 線下付款補登</span></div>
+              <div><time>2026-05-13 17:25</time><strong>order_refunded</strong><span>order#ORD-260508-014 · 客服退款完成</span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
